@@ -12,15 +12,21 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Font Awesome -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body class="bg-light">
 
     <div class="container py-4">
         <div class="row">
-            <div id="header-logo" class="col-12 justify-content-center text-center mb-4">
-                <!-- <img src="assets/images/logo-line.png" alt="Studio Zataar Logo" class="img-fluid" style="max-width: 200px;"> -->
-            </div>
+            <div id="header-logo" class="col-12 justify-content-end align-items-start mb-4 d-flex">
+    <input type="checkbox" class="btn-check" id="btn-check-2-outlined" autocomplete="off">
+    <label class="btn btn-outline-secondary btn-sm" for="btn-check-2-outlined">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+    </label><br>
+</div>
         </div>
 
         <!-- <h1 class="text-center mb-4">Restaurant Menu</h1> -->
@@ -29,8 +35,10 @@
         <div class="row mb-4 g-3">
 
             <div class="col-md-6">
+                <div class="row">
                 <input type="text" id="searchInput" class="form-control"
                     placeholder="Search by name, ingredient or allergen" />
+            </div>
             </div>
 
             <div class="col-md-6 d-flex gap-3 flex-wrap align-items-center">
@@ -50,815 +58,825 @@
                 </div>
 
                 <button class="btn btn-dark ms-auto" data-bs-toggle="modal" data-bs-target="#orderModal">
-                    View Order
+                    View Order <br>
+                    £<span id="order-total">0.00</span>
                 </button>
             </div>
         </div>
 
         <!-- MENU -->
-        <div class="row g-4 d-flex justify-content-center " id="menu">
+        <div class="menu-overlay">
+            <div class="row g-4 d-flex justify-content-center " id="menu">
 
 
-            <!-- HUMMUS & WARM PITA CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Hummus & Warm Pita"
-                data-ingredients="chickpeas tahini lemon garlic olive oil pita bread" data-allergens="sesame gluten"
-                data-vegan="true" data-vegetarian="true" data-halal="true" data-price="6.50">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- HUMMUS & WARM PITA CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Hummus & Warm Pita"
+                    data-ingredients="chickpeas tahini lemon garlic olive oil pita bread" data-allergens="sesame gluten"
+                    data-vegan="true" data-vegetarian="true" data-halal="true" data-price="6.50">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/hummus.png" class="img-fluid mb-3" alt="Hummus & Warm Pita">
+                            <div>
+                                <img src="assets/images/menu/hummus.png" class="img-fluid mb-3"
+                                    alt="Hummus & Warm Pita">
+                            </div>
+
+                            <h6 class="card-title">Hummus & Warm Pita</h6>
+                            <span class="badge bg-secondary mb-2">Starter</span>
+
+                            <!-- <p>Hummus served with warm pita bread.</p> -->
+                            <p><strong>Allergens:</strong> Sesame, Gluten</p>
+
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£6.50</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Hummus & Warm Pita</h6>
-                        <span class="badge bg-secondary mb-2">Starter</span>
-
-                        <!-- <p>Hummus served with warm pita bread.</p> -->
-                        <p><strong>Allergens:</strong> Sesame, Gluten</p>
-
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegan</span>
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£6.50</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
-            <!-- END CARD -->
+                <!-- END CARD -->
 
 
 
 
-            <!-- BABA GANOUSH -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Baba Ganoush"
-                data-ingredients="aubergine tahini garlic lemon olive oil" data-allergens="sesame" data-vegan="true"
-                data-vegetarian="true" data-halal="true" data-price="4.80">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- BABA GANOUSH -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Baba Ganoush"
+                    data-ingredients="aubergine tahini garlic lemon olive oil" data-allergens="sesame" data-vegan="true"
+                    data-vegetarian="true" data-halal="true" data-price="4.80">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/babaganoush.png" class="img-fluid mb-3" alt="Baba Ganoush">
+                            <div>
+                                <img src="assets/images/menu/babaganoush.png" class="img-fluid mb-3" alt="Baba Ganoush">
+                            </div>
+
+                            <h6 class="card-title">Baba Ganoush</h6>
+                            <span class="badge bg-secondary mb-2">Starter</span>
+
+                            <!-- <p>A smoky and creamy aubergine dip.</p> -->
+                            <p><strong>Allergens:</strong> Sesame</p>
+
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£4.80</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Baba Ganoush</h6>
-                        <span class="badge bg-secondary mb-2">Starter</span>
-
-                        <!-- <p>A smoky and creamy aubergine dip.</p> -->
-                        <p><strong>Allergens:</strong> Sesame</p>
-
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegan</span>
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£4.80</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- GREEK SALAD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Greek Salad"
-                data-ingredients="tomato cucumber red onion olives feta cheese" data-allergens="dairy"
-                data-vegan="false" data-vegetarian="true" data-halal="true" data-price="5.50">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- GREEK SALAD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Greek Salad"
+                    data-ingredients="tomato cucumber red onion olives feta cheese" data-allergens="dairy"
+                    data-vegan="false" data-vegetarian="true" data-halal="true" data-price="5.50">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/greeksalad.png" class="img-fluid mb-3" alt="Greek Salad">
+                            <div>
+                                <img src="assets/images/menu/greeksalad.png" class="img-fluid mb-3" alt="Greek Salad">
+                            </div>
+
+                            <h6 class="card-title">Greek Salad</h6>
+                            <span class="badge bg-secondary mb-2">Starter</span>
+
+                            <!-- <p>Fresh and crispy salad with feta cheese.</p> -->
+                            <p><strong>Allergens:</strong> Dairy</p>
+
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£5.50</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Greek Salad</h6>
-                        <span class="badge bg-secondary mb-2">Starter</span>
-
-                        <!-- <p>Fresh and crispy salad with feta cheese.</p> -->
-                        <p><strong>Allergens:</strong> Dairy</p>
-
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£5.50</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- FALAFEL BITES -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Falafel Bites"
-                data-ingredients="chickpeas parsley garlic cumin" data-allergens="none" data-vegan="true"
-                data-vegetarian="true" data-halal="true" data-price="5.20">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- FALAFEL BITES -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Falafel Bites"
+                    data-ingredients="chickpeas parsley garlic cumin" data-allergens="none" data-vegan="true"
+                    data-vegetarian="true" data-halal="true" data-price="5.20">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/falafel.png" class="img-fluid mb-3" alt="Falafel Bites">
+                            <div>
+                                <img src="assets/images/menu/falafel.png" class="img-fluid mb-3" alt="Falafel Bites">
+                            </div>
+
+                            <h6 class="card-title">Falafel Bites</h6>
+                            <span class="badge bg-secondary mb-2">Starter</span>
+
+                            <!-- <p>Crispy falafel bites, lightly seasoned with spices.</p> -->
+                            <p><strong>Allergens:</strong> None</p>
+
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£5.20</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Falafel Bites</h6>
-                        <span class="badge bg-secondary mb-2">Starter</span>
-
-                        <!-- <p>Crispy falafel bites, lightly seasoned with spices.</p> -->
-                        <p><strong>Allergens:</strong> None</p>
-
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegan</span>
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£5.20</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- STUFFED VINE LEAVES -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Stuffed Vine Leaves (Dolma)"
-                data-ingredients="vine leaves rice herbs lemon" data-allergens="none" data-vegan="true"
-                data-vegetarian="true" data-halal="true" data-price="5.00">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- STUFFED VINE LEAVES -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Stuffed Vine Leaves"
+                    data-ingredients="vine leaves rice herbs lemon" data-allergens="none" data-vegan="true"
+                    data-vegetarian="true" data-halal="true" data-price="5.00">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/vineleaves.png" class="img-fluid mb-3"
-                                alt="Stuffed Vine Leaves (Dolma)">
+                            <div>
+                                <img src="assets/images/menu/vineleaves.png" class="img-fluid mb-3"
+                                    alt="Stuffed Vine Leaves">
+                            </div>
+
+                            <h6 class="card-title">Stuffed Vine Leaves</h6>
+                            <span class="badge bg-secondary mb-2">Starter</span>
+
+                            <!-- <p>Delicate vine leaves stuffed with fragrant rice and herbs.</p> -->
+                            <p><strong>Allergens:</strong> None</p>
+
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£5.00</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Stuffed Vine Leaves (Dolma)</h6>
-                        <span class="badge bg-secondary mb-2">Starter</span>
-
-                        <!-- <p>Delicate vine leaves stuffed with fragrant rice and herbs.</p> -->
-                        <p><strong>Allergens:</strong> None</p>
-
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegan</span>
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£5.00</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- CHICKEN SHAWARMA CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Chicken Shawarma"
-                data-ingredients="chicken garlic yogurt spices" data-allergens="dairy" data-vegan="false"
-                data-vegetarian="false" data-halal="true" data-price="11.90">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- CHICKEN SHAWARMA CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Chicken Shawarma"
+                    data-ingredients="chicken garlic yogurt spices" data-allergens="dairy" data-vegan="false"
+                    data-vegetarian="false" data-halal="true" data-price="11.90">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/chickenshawarma.png" class="img-fluid mb-3"
-                                alt="Chicken Shawarma">
+                            <div>
+                                <img src="assets/images/menu/chickenshawarma.png" class="img-fluid mb-3"
+                                    alt="Chicken Shawarma">
+                            </div>
+
+                            <h6 class="card-title">Chicken Shawarma</h6>
+                            <span class="badge bg-info mb-2">Main</span>
+
+                            <!-- <p>Succulent grilled chicken marinated in yogurt and aromatic spices.</p> -->
+                            <p><strong>Allergens:</strong> Dairy</p>
+                            <div class="mb-2">
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£11.90</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Chicken Shawarma</h6>
-                        <span class="badge bg-info mb-2">Main</span>
-
-                        <!-- <p>Succulent grilled chicken marinated in yogurt and aromatic spices.</p> -->
-                        <p><strong>Allergens:</strong> Dairy</p>
-                        <div class="mb-2">
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£11.90</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- LAMB KOFTA PLATE CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Lamb Kofta Plate"
-                data-ingredients="lamb onion parsley spices" data-allergens="none" data-vegan="false"
-                data-vegetarian="false" data-halal="true" data-price="13.50">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- LAMB KOFTA PLATE CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Lamb Kofta Plate"
+                    data-ingredients="lamb onion parsley spices" data-allergens="none" data-vegan="false"
+                    data-vegetarian="false" data-halal="true" data-price="13.50">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/lambkofta.png" class="img-fluid mb-3" alt="Lamb Kofta Plate">
+                            <div>
+                                <img src="assets/images/menu/lambkofta.png" class="img-fluid mb-3"
+                                    alt="Lamb Kofta Plate">
+                            </div>
+
+                            <h6 class="card-title">Lamb Kofta Plate</h6>
+                            <span class="badge bg-info mb-2">Main</span>
+
+                            <!-- <p>Spiced lamb koftas, served with sides of your choice.</p> -->
+                            <p><strong>Allergens:</strong> None</p>
+                            <div class="mb-2">
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£13.50</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Lamb Kofta Plate</h6>
-                        <span class="badge bg-info mb-2">Main</span>
-
-                        <!-- <p>Spiced lamb koftas, served with sides of your choice.</p> -->
-                        <p><strong>Allergens:</strong> None</p>
-                        <div class="mb-2">
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£13.50</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- VEGETABLE MOUSSAKA CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Vegetable Moussaka"
-                data-ingredients="aubergine potato tomato béchamel sauce" data-allergens="dairy eggs gluten"
-                data-vegan="false" data-vegetarian="true" data-halal="true" data-price="10.50">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- VEGETABLE MOUSSAKA CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Vegetable Moussaka"
+                    data-ingredients="aubergine potato tomato béchamel sauce" data-allergens="dairy eggs gluten"
+                    data-vegan="false" data-vegetarian="true" data-halal="true" data-price="10.50">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/vegetablemoussaka.png" class="img-fluid mb-3"
-                                alt="Vegetable Moussaka">
+                            <div>
+                                <img src="assets/images/menu/vegetablemoussaka.png" class="img-fluid mb-3"
+                                    alt="Vegetable Moussaka">
+                            </div>
+
+                            <h6 class="card-title">Vegetable Moussaka</h6>
+                            <span class="badge bg-info mb-2">Main</span>
+
+                            <!-- <p>A hearty layered dish of grilled vegetables and béchamel sauce.</p> -->
+                            <p><strong>Allergens:</strong> Dairy, Eggs, Gluten</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£10.50</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Vegetable Moussaka</h6>
-                        <span class="badge bg-info mb-2">Main</span>
-
-                        <!-- <p>A hearty layered dish of grilled vegetables and béchamel sauce.</p> -->
-                        <p><strong>Allergens:</strong> Dairy, Eggs, Gluten</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£10.50</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- SEAFOOD ORZO CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Seafood Orzo"
-                data-ingredients="prawns mussels orzo pasta tomato garlic" data-allergens="shellfish fish gluten"
-                data-vegan="false" data-vegetarian="false" data-halal="false" data-price="14.90">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- SEAFOOD ORZO CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Seafood Orzo"
+                    data-ingredients="prawns mussels orzo pasta tomato garlic" data-allergens="shellfish fish gluten"
+                    data-vegan="false" data-vegetarian="false" data-halal="false" data-price="14.90">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/seafoodorzo.png" class="img-fluid mb-3" alt="Seafood Orzo">
+                            <div>
+                                <img src="assets/images/menu/seafoodorzo.png" class="img-fluid mb-3" alt="Seafood Orzo">
+                            </div>
+
+                            <h6 class="card-title">Seafood Orzo</h6>
+                            <span class="badge bg-info mb-2">Main</span>
+
+                            <!-- <p>A delightful seafood pasta dish with orzo, prawns, and mussels.</p> -->
+                            <p><strong>Allergens:</strong> Shellfish, Fish, Gluten</p>
+
+                            <p class="fw-bold">£14.90</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Seafood Orzo</h6>
-                        <span class="badge bg-info mb-2">Main</span>
-
-                        <!-- <p>A delightful seafood pasta dish with orzo, prawns, and mussels.</p> -->
-                        <p><strong>Allergens:</strong> Shellfish, Fish, Gluten</p>
-
-                        <p class="fw-bold">£14.90</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- FALAFEL PLATE -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Falafel Plate"
-                data-ingredients="chickpeas hummus salad tahini" data-allergens="sesame" data-vegan="true"
-                data-vegetarian="true" data-halal="true" data-price="9.50">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- FALAFEL PLATE -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Falafel Plate"
+                    data-ingredients="chickpeas hummus salad tahini" data-allergens="sesame" data-vegan="true"
+                    data-vegetarian="true" data-halal="true" data-price="9.50">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/falafelplate.png" class="img-fluid mb-3" alt="Falafel Plate">
+                            <div>
+                                <img src="assets/images/menu/falafelplate.png" class="img-fluid mb-3"
+                                    alt="Falafel Plate">
+                            </div>
+
+                            <h6 class="card-title">Falafel Plate</h6>
+                            <span class="badge bg-info mb-2">Main</span>
+
+                            <!-- <p>Falafel served with creamy hummus and fresh salad.</p> -->
+                            <p><strong>Allergens:</strong> Sesame</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£9.50</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Falafel Plate</h6>
-                        <span class="badge bg-info mb-2">Main</span>
-
-                        <!-- <p>Falafel served with creamy hummus and fresh salad.</p> -->
-                        <p><strong>Allergens:</strong> Sesame</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegan</span>
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£9.50</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- GRILLED HALLOUMI & VEGETABLES CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Grilled Halloumi & Vegetables"
-                data-ingredients="halloumi cheese courgette peppers olive oil" data-allergens="dairy" data-vegan="false"
-                data-vegetarian="true" data-halal="true" data-price="10.90">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- GRILLED HALLOUMI & VEGETABLES CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Grilled Halloumi & Vegetables"
+                    data-ingredients="halloumi cheese courgette peppers olive oil" data-allergens="dairy"
+                    data-vegan="false" data-vegetarian="true" data-halal="true" data-price="10.90">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/halloumiplate.png" class="img-fluid mb-3"
-                                alt="Grilled Halloumi & Vegetables">
+                            <div>
+                                <img src="assets/images/menu/halloumiplate.png" class="img-fluid mb-3"
+                                    alt="Grilled Halloumi & Vegetables">
+                            </div>
+
+                            <h6 class="card-title">Grilled Halloumi & Vegetables</h6>
+                            <span class="badge bg-info mb-2">Main</span>
+
+                            <!-- <p>Grilled halloumi cheese served with charred vegetables.</p> -->
+                            <p><strong>Allergens:</strong> Dairy</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£10.90</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Grilled Halloumi & Vegetables</h6>
-                        <span class="badge bg-info mb-2">Main</span>
-
-                        <!-- <p>Grilled halloumi cheese served with charred vegetables.</p> -->
-                        <p><strong>Allergens:</strong> Dairy</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£10.90</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- BEEF KEBAB WRAP CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Beef Kebab Wrap"
-                data-ingredients="beef flatbread tomato onion yogurt sauce" data-allergens="gluten dairy"
-                data-vegan="false" data-vegetarian="false" data-halal="true" data-price="11.50">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- BEEF KEBAB WRAP CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Beef Kebab Wrap"
+                    data-ingredients="beef flatbread tomato onion yogurt sauce" data-allergens="gluten dairy"
+                    data-vegan="false" data-vegetarian="false" data-halal="true" data-price="11.50">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/beefkebab.png" class="img-fluid mb-3" alt="Beef Kebab Wrap">
+                            <div>
+                                <img src="assets/images/menu/beefkebab.png" class="img-fluid mb-3"
+                                    alt="Beef Kebab Wrap">
+                            </div>
+
+                            <h6 class="card-title">Beef Kebab Wrap</h6>
+                            <span class="badge bg-info mb-2">Main</span>
+
+                            <!-- <p>Savory beef kebab wrapped in soft flatbread with yogurt sauce.</p> -->
+                            <p><strong>Allergens:</strong> Gluten, Dairy</p>
+                            <div class="mb-2">
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£11.50</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Beef Kebab Wrap</h6>
-                        <span class="badge bg-info mb-2">Main</span>
-
-                        <!-- <p>Savory beef kebab wrapped in soft flatbread with yogurt sauce.</p> -->
-                        <p><strong>Allergens:</strong> Gluten, Dairy</p>
-                        <div class="mb-2">
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£11.50</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
 
-            <!-- MEDITERRANEAN LENTIL STEW CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Mediterranean Lentil Stew"
-                data-ingredients="lentils tomato onion carrot spices" data-allergens="none" data-vegan="true"
-                data-vegetarian="true" data-halal="true" data-price="9.80">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- MEDITERRANEAN LENTIL STEW CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Mediterranean Lentil Stew"
+                    data-ingredients="lentils tomato onion carrot spices" data-allergens="none" data-vegan="true"
+                    data-vegetarian="true" data-halal="true" data-price="9.80">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/lentilstew.png" class="img-fluid mb-3"
-                                alt="Mediterranean Lentil Stew">
+                            <div>
+                                <img src="assets/images/menu/lentilstew.png" class="img-fluid mb-3"
+                                    alt="Mediterranean Lentil Stew">
+                            </div>
+
+                            <h6 class="card-title">Mediterranean Lentil Stew</h6>
+                            <span class="badge bg-info mb-2">Main</span>
+
+                            <!-- <p>A flavorful stew of lentils and aromatic spices.</p> -->
+                            <p><strong>Allergens:</strong> None</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£9.80</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Mediterranean Lentil Stew</h6>
-                        <span class="badge bg-info mb-2">Main</span>
-
-                        <!-- <p>A flavorful stew of lentils and aromatic spices.</p> -->
-                        <p><strong>Allergens:</strong> None</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegan</span>
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£9.80</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- LEMON HERB SEA BASS CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Lemon Herb Sea Bass"
-                data-ingredients="sea bass lemon herbs olive oil" data-allergens="fish" data-vegan="false"
-                data-vegetarian="false" data-halal="false" data-price="15.50">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- LEMON HERB SEA BASS CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Lemon Herb Sea Bass"
+                    data-ingredients="sea bass lemon herbs olive oil" data-allergens="fish" data-vegan="false"
+                    data-vegetarian="false" data-halal="false" data-price="15.50">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/seabass.png" class="img-fluid mb-3"
-                                alt="Lemon Herb Sea Bass">
+                            <div>
+                                <img src="assets/images/menu/seabass.png" class="img-fluid mb-3"
+                                    alt="Lemon Herb Sea Bass">
+                            </div>
+
+                            <h6 class="card-title">Lemon Herb Sea Bass</h6>
+                            <span class="badge bg-info mb-2">Main</span>
+
+                            <!-- <p>A perfectly cooked sea bass served with a zesty lemon herb dressing.</p> -->
+                            <p><strong>Allergens:</strong> Fish</p>
+
+                            <p class="fw-bold">£15.50</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Lemon Herb Sea Bass</h6>
-                        <span class="badge bg-info mb-2">Main</span>
-
-                        <!-- <p>A perfectly cooked sea bass served with a zesty lemon herb dressing.</p> -->
-                        <p><strong>Allergens:</strong> Fish</p>
-
-                        <p class="fw-bold">£15.50</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- ROASTED POTATOES CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Roasted Potatoes"
-                data-ingredients="potatoes rosemary garlic olive oil" data-allergens="none" data-vegan="true"
-                data-vegetarian="true" data-halal="true" data-price="3.80">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- ROASTED POTATOES CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Roasted Potatoes"
+                    data-ingredients="potatoes rosemary garlic olive oil" data-allergens="none" data-vegan="true"
+                    data-vegetarian="true" data-halal="true" data-price="3.80">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/potatoes.png" class="img-fluid mb-3"
-                                alt="Roasted Potatoes">
+                            <div>
+                                <img src="assets/images/menu/potatoes.png" class="img-fluid mb-3"
+                                    alt="Roasted Potatoes">
+                            </div>
+
+                            <h6 class="card-title">Roasted Potatoes</h6>
+                            <span class="badge bg-danger mb-2">Side</span>
+
+                            <!-- <p>Golden roasted potatoes with garlic and rosemary.</p> -->
+                            <p><strong>Allergens:</strong> None</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£3.80</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Roasted Potatoes</h6>
-                        <span class="badge bg-danger mb-2">Side</span>
-
-                        <!-- <p>Golden roasted potatoes with garlic and rosemary.</p> -->
-                        <p><strong>Allergens:</strong> None</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegan</span>
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£3.80</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- COUSCOUS SALAD CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Couscous Salad"
-                data-ingredients="couscous tomato herbs lemon" data-allergens="gluten" data-vegan="false"
-                data-vegetarian="true" data-halal="true" data-price="4.20">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- COUSCOUS SALAD CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Couscous Salad"
+                    data-ingredients="couscous tomato herbs lemon" data-allergens="gluten" 
+                    data-vegan="true"
+                    data-vegetarian="true" data-halal="true" data-price="4.20">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/couscous.png" class="img-fluid mb-3"
-                                alt="Couscous Salad">
+                            <div>
+                                <img src="assets/images/menu/couscous.png" class="img-fluid mb-3" alt="Couscous Salad">
+                            </div>
+
+                            <h6 class="card-title">Couscous Salad</h6>
+                            <span class="badge bg-danger mb-2">Side</span>
+
+                            <!-- <p>A light couscous salad with fresh herbs and lemon.</p> -->
+                            <p><strong>Allergens:</strong> Gluten</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£4.20</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Couscous Salad</h6>
-                        <span class="badge bg-danger mb-2">Side</span>
-
-                        <!-- <p>A light couscous salad with fresh herbs and lemon.</p> -->
-                        <p><strong>Allergens:</strong> Gluten</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£4.20</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- PITA BREAD CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Pita Bread"
-                data-ingredients="wheat flour yeast olive oil" data-allergens="gluten" data-vegan="true"
-                data-vegetarian="true" data-halal="true" data-price="2.50">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- PITA BREAD CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Pita Bread"
+                    data-ingredients="wheat flour yeast olive oil" data-allergens="gluten" data-vegan="true"
+                    data-vegetarian="true" data-halal="true" data-price="2.50">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/pitabread.png" class="img-fluid mb-3" alt="Pita Bread">
+                            <div>
+                                <img src="assets/images/menu/pitabread.png" class="img-fluid mb-3" alt="Pita Bread">
+                            </div>
+
+                            <h6 class="card-title">Pita Bread</h6>
+                            <span class="badge bg-danger mb-2">Side</span>
+
+                            <!-- <p>Soft and warm pita bread.</p> -->
+                            <p><strong>Allergens:</strong> Gluten</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£2.50</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Pita Bread</h6>
-                        <span class="badge bg-danger mb-2">Side</span>
-
-                        <!-- <p>Soft and warm pita bread.</p> -->
-                        <p><strong>Allergens:</strong> Gluten</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegan</span>
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£2.50</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- TZATZIKI CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Tzatziki" data-ingredients="yogurt cucumber garlic dill"
-                data-allergens="dairy" data-vegan="false" data-vegetarian="true" data-halal="true" data-price="3.00">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- TZATZIKI CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Tzatziki"
+                    data-ingredients="yogurt cucumber garlic dill" data-allergens="dairy" data-vegan="false"
+                    data-vegetarian="true" data-halal="true" data-price="3.00">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/tzatziki.png" class="img-fluid mb-3" alt="Tzatziki">
+                            <div>
+                                <img src="assets/images/menu/tzatziki.png" class="img-fluid mb-3" alt="Tzatziki">
+                            </div>
+
+                            <h6 class="card-title">Tzatziki</h6>
+                            <span class="badge bg-danger mb-2">Side</span>
+
+                            <!-- <p>Refreshing yogurt dip with garlic and dill.</p> -->
+                            <p><strong>Allergens:</strong> Dairy</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£3.00</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Tzatziki</h6>
-                        <span class="badge bg-danger mb-2">Side</span>
-
-                        <!-- <p>Refreshing yogurt dip with garlic and dill.</p> -->
-                        <p><strong>Allergens:</strong> Dairy</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£3.00</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
 
-            <!-- BAKLAVA CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Baklava"
-                data-ingredients="filo pastry nuts honey butter" data-allergens="nuts gluten dairy" data-vegan="false"
-                data-vegetarian="true" data-halal="true" data-price="4.90">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- BAKLAVA CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Baklava"
+                    data-ingredients="filo pastry nuts honey butter" data-allergens="nuts gluten dairy"
+                    data-vegan="false" data-vegetarian="true" data-halal="true" data-price="4.90">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/baklava.png" class="img-fluid mb-3" alt="Baklava">
+                            <div>
+                                <img src="assets/images/menu/baklava.png" class="img-fluid mb-3" alt="Baklava">
+                            </div>
+
+                            <h6 class="card-title">Baklava</h6>
+                            <span class="badge bg-warning mb-2">Dessert</span>
+
+                            <!-- <p>A rich, sweet layered pastry made with nuts and honey.</p> -->
+                            <p><strong>Allergens:</strong> Nuts, Gluten, Dairy</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£4.90</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Baklava</h6>
-                        <span class="badge bg-warning mb-2">Dessert</span>
-
-                        <!-- <p>A rich, sweet layered pastry made with nuts and honey.</p> -->
-                        <p><strong>Allergens:</strong> Nuts, Gluten, Dairy</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£4.90</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- GREEK YOGURT & HONEY CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Greek Yogurt & Honey"
-                data-ingredients="yogurt honey walnuts" data-allergens="dairy nuts" data-vegan="false"
-                data-vegetarian="true" data-halal="true" data-price="4.50">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- GREEK YOGURT & HONEY CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Greek Yogurt & Honey"
+                    data-ingredients="yogurt honey walnuts" data-allergens="dairy nuts" data-vegan="false"
+                    data-vegetarian="true" data-halal="true" data-price="4.50">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/greekyogurt.png" class="img-fluid mb-3"
-                                alt="Greek Yogurt & Honey">
+                            <div>
+                                <img src="assets/images/menu/greekyogurt.png" class="img-fluid mb-3"
+                                    alt="Greek Yogurt & Honey">
+                            </div>
+
+                            <h6 class="card-title">Greek Yogurt & Honey</h6>
+                            <span class="badge bg-warning mb-2">Dessert</span>
+
+                            <!-- <p>Thick Greek yogurt drizzled with honey and crunchy walnuts.</p> -->
+                            <p><strong>Allergens:</strong> Dairy, Nuts</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£4.50</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Greek Yogurt & Honey</h6>
-                        <span class="badge bg-warning mb-2">Dessert</span>
-
-                        <!-- <p>Thick Greek yogurt drizzled with honey and crunchy walnuts.</p> -->
-                        <p><strong>Allergens:</strong> Dairy, Nuts</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£4.50</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- ORANGE SEMOLINA CAKE CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Orange Semolina Cake"
-                data-ingredients="semolina orange sugar olive oil" data-allergens="gluten" data-vegan="true"
-                data-vegetarian="true" data-halal="true" data-price="4.20">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- ORANGE SEMOLINA CAKE CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Orange Semolina Cake"
+                    data-ingredients="semolina orange sugar olive oil" data-allergens="gluten" data-vegan="true"
+                    data-vegetarian="true" data-halal="true" data-price="4.20">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/semolinacake.png" class="img-fluid mb-3"
-                                alt="Orange Semolina Cake">
+                            <div>
+                                <img src="assets/images/menu/semolinacake.png" class="img-fluid mb-3"
+                                    alt="Orange Semolina Cake">
+                            </div>
+
+                            <h6 class="card-title">Orange Semolina Cake</h6>
+                            <span class="badge bg-warning mb-2">Dessert</span>
+
+                            <!-- <p>A moist and delicious orange-flavored semolina cake.</p> -->
+                            <p><strong>Allergens:</strong> Gluten</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£4.20</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Orange Semolina Cake</h6>
-                        <span class="badge bg-warning mb-2">Dessert</span>
-
-                        <!-- <p>A moist and delicious orange-flavored semolina cake.</p> -->
-                        <p><strong>Allergens:</strong> Gluten</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegan</span>
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£4.20</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- LEMON SORBET CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Lemon Sorbet" data-ingredients="lemon sugar water"
-                data-allergens="none" data-vegan="true" data-vegetarian="true" data-halal="true" data-price="3.90">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- LEMON SORBET CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Lemon Sorbet"
+                    data-ingredients="lemon sugar water" data-allergens="none" data-vegan="true" data-vegetarian="true"
+                    data-halal="true" data-price="3.90">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/lemonsorbet.png" class="img-fluid mb-3" alt="Lemon Sorbet">
+                            <div>
+                                <img src="assets/images/menu/lemonsorbet.png" class="img-fluid mb-3" alt="Lemon Sorbet">
+                            </div>
+
+                            <h6 class="card-title">Lemon Sorbet</h6>
+                            <span class="badge bg-warning mb-2">Dessert</span>
+
+                            <!-- <p>A refreshing and tangy lemon sorbet.</p> -->
+                            <p><strong>Allergens:</strong> None</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£3.90</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Lemon Sorbet</h6>
-                        <span class="badge bg-warning mb-2">Dessert</span>
-
-                        <!-- <p>A refreshing and tangy lemon sorbet.</p> -->
-                        <p><strong>Allergens:</strong> None</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegan</span>
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£3.90</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- DATE & ALMOND BALLS CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Date & Almond Balls"
-                data-ingredients="dates almonds cocoa powder" data-allergens="nuts" data-vegan="true"
-                data-vegetarian="true" data-halal="true" data-price="4.00">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- DATE & ALMOND BALLS CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Date & Almond Balls"
+                    data-ingredients="dates almonds cocoa powder" data-allergens="nuts" data-vegan="true"
+                    data-vegetarian="true" data-halal="true" data-price="4.00">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/dateballs.png" class="img-fluid mb-3"
-                                alt="Date & Almond Balls">
+                            <div>
+                                <img src="assets/images/menu/dateballs.png" class="img-fluid mb-3"
+                                    alt="Date & Almond Balls">
+                            </div>
+
+                            <h6 class="card-title">Date & Almond Balls</h6>
+                            <span class="badge bg-warning mb-2">Dessert</span>
+
+                            <!-- <p>Energy-boosting balls of dates, almonds, and cocoa powder.</p> -->
+                            <p><strong>Allergens:</strong> Nuts</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£4.00</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Date & Almond Balls</h6>
-                        <span class="badge bg-warning mb-2">Dessert</span>
-
-                        <!-- <p>Energy-boosting balls of dates, almonds, and cocoa powder.</p> -->
-                        <p><strong>Allergens:</strong> Nuts</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegan</span>
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£4.00</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- MINT TEA CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Mint Tea" data-ingredients="fresh mint green tea"
-                data-allergens="none" data-vegan="true" data-vegetarian="true" data-halal="true" data-price="2.80">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- MINT TEA CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Mint Tea"
+                    data-ingredients="fresh mint green tea" data-allergens="none" data-vegan="true"
+                    data-vegetarian="true" data-halal="true" data-price="2.80">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/minttea.png" class="img-fluid mb-3" alt="Mint Tea">
+                            <div>
+                                <img src="assets/images/menu/minttea.png" class="img-fluid mb-3" alt="Mint Tea">
+                            </div>
+
+                            <h6 class="card-title">Mint Tea</h6>
+                            <span class="badge bg-light text-dark mb-2">Drink</span>
+
+                            <!-- <p>Freshly brewed mint tea with green tea leaves.</p> -->
+                            <p><strong>Allergens:</strong> None</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£2.80</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Mint Tea</h6>
-                        <span class="badge bg-light text-dark mb-2">Extra</span>
-
-                        <!-- <p>Freshly brewed mint tea with green tea leaves.</p> -->
-                        <p><strong>Allergens:</strong> None</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegan</span>
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£2.80</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- COFFEE CARD -->
-            <div class="col-md-4 col-lg-3 meal-card" data-name="Coffee" data-ingredients="coffee" data-allergens="none"
-                data-vegan="true" data-vegetarian="true" data-halal="true" data-price="2.20">
-                <div class="card h-100">
-                    <div class="card-body">
+                <!-- COFFEE CARD -->
+                <div class="col-6 col-md-4 col-lg-3 meal-card" data-name="Coffee" data-ingredients="coffee"
+                    data-allergens="none" data-vegan="true" data-vegetarian="true" data-halal="true" data-price="2.20">
+                    <div class="card h-100">
+                        <div class="card-body">
 
-                        <div>
-                            <img src="assets/images/menu/coffee.png" class="img-fluid mb-3" alt="Coffee">
+                            <div>
+                                <img src="assets/images/menu/coffee.png" class="img-fluid mb-3" alt="Coffee">
+                            </div>
+
+                            <h6 class="card-title">Coffee</h6>
+                            <span class="badge bg-light text-dark mb-2">Drink</span>
+
+                            <!-- <p>Freshly brewed coffee.</p> -->
+                            <p><strong>Allergens:</strong> None</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Vegan</span>
+                                <span class="badge bg-success">Vegetarian</span>
+                                <span class="badge bg-warning text-dark">Halal</span>
+                            </div>
+
+                            <p class="fw-bold">£2.20</p>
+
+                            <button class="btn btn-outline-secondary btn-sm add-to-order">
+                                Add to order
+                            </button>
+
                         </div>
-
-                        <h6 class="card-title">Coffee</h6>
-                        <span class="badge bg-light text-dark mb-2">Extra</span>
-
-                        <!-- <p>Freshly brewed coffee.</p> -->
-                        <p><strong>Allergens:</strong> None</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">Vegan</span>
-                            <span class="badge bg-success">Vegetarian</span>
-                            <span class="badge bg-warning text-dark">Halal</span>
-                        </div>
-
-                        <p class="fw-bold">£2.20</p>
-
-                        <button class="btn btn-outline-secondary btn-sm add-to-order">
-                            Add to order
-                        </button>
-
                     </div>
                 </div>
+
+
+<!-- END OF CARDS -->
+
+
             </div>
-
-
-
-
-            <!-- DUPLICATE CARD STRUCTURE FOR MORE MEALS -->
-
         </div>
     </div>
 
@@ -892,79 +910,5 @@
 
     <script src="assets/js/script.js"></script>
 
-
-
-
-
-    <!-- JS LOGIC -->
-    <!-- <script>
-  const searchInput = document.getElementById("searchInput");
-  const filters = {
-    vegan: document.getElementById("filterVegan"),
-    vegetarian: document.getElementById("filterVegetarian"),
-    halal: document.getElementById("filterHalal")
-  };
-
-  const cards = document.querySelectorAll(".meal-card");
-  const order = [];
-  const orderList = document.getElementById("orderList");
-  const orderTotal = document.getElementById("orderTotal");
-
-  function filterMenu() {
-    const searchValue = searchInput.value.toLowerCase();
-
-    cards.forEach(card => {
-      const text =
-        card.dataset.name +
-        card.dataset.ingredients +
-        card.dataset.allergens;
-
-      const matchesSearch = text.toLowerCase().includes(searchValue);
-
-      const matchesVegan = !filters.vegan.checked || card.dataset.vegan === "true";
-      const matchesVegetarian = !filters.vegetarian.checked || card.dataset.vegetarian === "true";
-      const matchesHalal = !filters.halal.checked || card.dataset.halal === "true";
-
-      card.style.display =
-        matchesSearch && matchesVegan && matchesVegetarian && matchesHalal
-          ? "block"
-          : "none";
-    });
-  }
-
-  searchInput.addEventListener("input", filterMenu);
-  Object.values(filters).forEach(filter =>
-    filter.addEventListener("change", filterMenu)
-  );
-
-  document.querySelectorAll(".add-to-order").forEach(button => {
-    button.addEventListener("click", () => {
-      const card = button.closest(".meal-card");
-      const name = card.dataset.name;
-      const price = parseFloat(card.dataset.price);
-
-      order.push({ name, price });
-      updateOrder();
-    });
-  });
-
-  function updateOrder() {
-    orderList.innerHTML = "";
-    let total = 0;
-
-    order.forEach(item => {
-      total += item.price;
-      const li = document.createElement("li");
-      li.className = "list-group-item d-flex justify-content-between";
-      li.textContent = item.name;
-      li.innerHTML += `<span>£${item.price.toFixed(2)}</span>`;
-      orderList.appendChild(li);
-    });
-
-    orderTotal.textContent = total.toFixed(2);
-  }
-</script> -->
-
 </body>
-
 </html>

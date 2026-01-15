@@ -2,20 +2,36 @@
     outline: 1px solid red; For debugging layout issues} */
 
 #header-logo {
-  background-image: url("../images/logo-line.png");
- 
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100px;
-  width: 100%;
+    background-image: url("../images/logo-line.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    width: 100%;
 }
 
+.menu-overlay {
+        background-image: url("../images/logo-split.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed; /* Keeps the image fixed in the viewport */
+        height: 100%;
+        width: 100%;
+    }
+
+     #menu {
+        
+        background-color: rgba(248, 249, 250, 0.9); /* Semi-transparent white overlay */
+        margin: 0px !important;
+    }
 
 .meal-card {
     font-size: 0.8rem;
-    max-width: 250px;
+    /* max-width: 250px; */
 }
+
+
 
 .card.h-100 {
     display: flex;
@@ -35,6 +51,27 @@
 }
 
 .bg-danger {
-    background-color: #4791bc !important; /* Change the background color */
-    color: #ffffff; /* Change the text color */
+    background-color: #4791bc !important;
+    /* Change the background color */
+    color: #ffffff;
+    /* Change the text color */
+}
+
+
+.row {
+    max-width: 1320px !important;
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+}
+
+@media screen and (min-width: 768px) {
+
+    .meal-card {
+        max-width: 250px;
+    }
+
+    #searchInput {
+    max-width: 350px;
+}
+
 }
