@@ -33,7 +33,13 @@ body.dark-mode .add-to-order {
     outline: 1px solid #ffffff !important;
 }
 
+/* HIDDEN TAG */
 
+.hidden {
+  display: none;
+}
+
+/* HEADER */
 
 #header-logo {
     background-image: url("../images/logo-line.png");
@@ -44,23 +50,15 @@ body.dark-mode .add-to-order {
     width: 100%;
 }
 
-.menu-overlay {
-    /* background-image: url("../images/background.png"); */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    /* Keeps the image fixed in the viewport */
-    height: 100%;
-    width: 100%;
-}
+/* MAIN BODY */
 
 #menu {
     background-color: rgba(248, 249, 250, 0.8);
-    /* Semi-transparent white overlay */
     margin: 0px !important;
 }
 
+
+/* CARDS */
 
 .meal-card {
     font-size: 0.8rem;
@@ -79,7 +77,6 @@ body.dark-mode .add-to-order {
     justify-content: space-between;
 }
 
-
 .badge {
     width: auto;
 }
@@ -91,11 +88,6 @@ body.dark-mode .add-to-order {
     /* Change the text color */
 }
 
-.row {
-    max-width: 1320px !important;
-    margin-left: 12px !important;
-    margin-right: 12px !important;
-}
 
 /* MEDIUM SCREEN QUERY */
 
