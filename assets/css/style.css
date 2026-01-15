@@ -12,7 +12,7 @@
 
 body.dark-mode #menu {
     background-color: #121212 !important;
-    background-image: url("../images/logo-split.png");
+    /* background-image: url("../images/background.png"); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -45,7 +45,7 @@ body.dark-mode .add-to-order {
 }
 
 .menu-overlay {
-    background-image: url("../images/logo-split.png");
+    /* background-image: url("../images/background.png"); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -56,7 +56,7 @@ body.dark-mode .add-to-order {
 }
 
 #menu {
-    background-color: rgba(248, 249, 250, 0.9);
+    background-color: rgba(248, 249, 250, 0.8);
     /* Semi-transparent white overlay */
     margin: 0px !important;
 }
