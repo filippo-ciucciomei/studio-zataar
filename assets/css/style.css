@@ -1,6 +1,14 @@
 /* div {
     outline: 1px solid red; For debugging layout issues} */
 
+
+    /* DARK MODE CLASS */
+
+.dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
 #header-logo {
     background-image: url("../images/logo-line.png");
     background-size: contain;

@@ -1,4 +1,13 @@
+// DARK MODE TOGGLE
 
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+  
+  
+  
+  
   const searchInput = document.getElementById("searchInput");
   const filters = {
     vegan: document.getElementById("filterVegan"),
@@ -10,6 +19,7 @@
   const order = [];
   const orderList = document.getElementById("orderList");
   const orderTotal = document.getElementById("orderTotal");
+  const orderTotalPreview = document.getElementById("order-total");
 
   function filterMenu() {
     const searchValue = searchInput.value.toLowerCase();
