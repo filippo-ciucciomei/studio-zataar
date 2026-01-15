@@ -1,6 +1,8 @@
 // DARK MODE TOGGLE
+// it will add .dark-mode to the body, and in CSS when the 
+// body has .dark-mode, a number of other elements will be changed
 
-function myFunction() {
+function darkMode() {
    var element = document.body;
    element.classList.toggle("dark-mode");
 }

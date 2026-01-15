@@ -2,12 +2,38 @@
     outline: 1px solid red; For debugging layout issues} */
 
 
-    /* DARK MODE CLASS */
+/* DARK MODE CLASS */
+/* When dark mode is apllied to body with JS, the other elements will be changed as well */
 
 .dark-mode {
     background-color: #121212 !important;
     color: #e0e0e0 !important;
 }
+
+body.dark-mode #menu {
+    background-color: #121212 !important;
+    background-image: url("../images/logo-split.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* Keeps the image fixed in the viewport */
+    height: 100%;
+    width: 100%;
+}
+
+body.dark-mode .card-body {
+    background-color: #313131 !important;
+    color: #e0e0e0 !important;
+    border-radius: 6px;
+}
+
+body.dark-mode .add-to-order {
+    color: #ffffff !important;
+    outline: 1px solid #ffffff !important;
+}
+
+
 
 #header-logo {
     background-image: url("../images/logo-line.png");
@@ -19,27 +45,27 @@
 }
 
 .menu-overlay {
-        background-image: url("../images/logo-split.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed; /* Keeps the image fixed in the viewport */
-        height: 100%;
-        width: 100%;
-    }
+    background-image: url("../images/logo-split.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* Keeps the image fixed in the viewport */
+    height: 100%;
+    width: 100%;
+}
 
-     #menu {
-        
-        background-color: rgba(248, 249, 250, 0.9); /* Semi-transparent white overlay */
-        margin: 0px !important;
-    }
+#menu {
+    background-color: rgba(248, 249, 250, 0.9);
+    /* Semi-transparent white overlay */
+    margin: 0px !important;
+}
+
 
 .meal-card {
     font-size: 0.8rem;
     /* max-width: 250px; */
 }
-
-
 
 .card.h-100 {
     display: flex;
@@ -65,12 +91,13 @@
     /* Change the text color */
 }
 
-
 .row {
     max-width: 1320px !important;
     margin-left: 12px !important;
     margin-right: 12px !important;
 }
+
+/* MEDIUM SCREEN QUERY */
 
 @media screen and (min-width: 768px) {
 
@@ -79,7 +106,7 @@
     }
 
     #searchInput {
-    max-width: 350px;
-}
+        max-width: 350px;
+    }
 
 }
