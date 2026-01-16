@@ -22,6 +22,7 @@ body.dark-mode #menu {
     width: 100%;
 }
 
+
 body.dark-mode .card-body {
     background-color: #313131 !important;
     color: #e0e0e0 !important;
@@ -31,6 +32,11 @@ body.dark-mode .card-body {
 body.dark-mode .add-to-order {
     color: #ffffff !important;
     outline: 1px solid #ffffff !important;
+}
+
+body.dark-mode .modal-content {
+    background-color: #313131 !important;
+    border: 1px solid #c8c3c3 !important;
 }
 
 /* HIDDEN TAG */
@@ -89,6 +95,8 @@ body.dark-mode .add-to-order {
 
 
 /* ORDER SUMMARY MODAL */
+
+
 .order-item {
   display: flex;
   justify-content: space-between;  /* lets the two span elements be on opposite ends */
