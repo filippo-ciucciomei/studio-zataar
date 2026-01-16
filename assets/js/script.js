@@ -2,6 +2,8 @@
 // it will add .dark-mode to the body, and in CSS when the 
 // body has .dark-mode, a number of other elements will be changed
 
+// NEED TO FIX COLORING FOR THE MODAL TOO
+
 function darkMode() {
    var element = document.body;
    element.classList.toggle("dark-mode");
@@ -66,35 +68,52 @@ document.getElementById("searchInput").addEventListener("input", searchCards);
 
 // ORDERING FUNCTIONALITY
 // 
-// User clicks “Add to order” on a card
-// JS reads name + price from that card’s data-*
-// JS creates one <li> row inside a modal list
-// Name and price appear in two columns
-// 
+
 // 
 const orderButtons = document.querySelectorAll(".add-to-order");
 const orderList = document.getElementById("orderList");
 
 function handleAddToOrder(event) {
-  const button = event.target;
-  const card = button.closest(".meal-card");
+  const eventButton = event.target; // event.target tells us which button was clicked
+  const card = eventButton.closest(".meal-card");
 
   const name = card.dataset.name;
   const price = card.dataset.price;
 
-  const li = document.createElement("li");
-  li.classList.add("order-item");
+  // before we create a new order item, check if it already exists
+  const existingItem = orderList.querySelector(
+  `.order-item[data-name="${name}"]`
+);
 
-  li.innerHTML = `
+if (existingItem) {
+const multiplier = existingItem.querySelector(".multiplier");
+const currentMultiplier = parseInt(multiplier.textContent);
+const newMultiplier = currentMultiplier + 1;
+const total = parseFloat(price) * newMultiplier;
+
+
+  existingItem.querySelector(".order-price").textContent = `£${total.toFixed(2)}`;
+  existingItem.querySelector(".multiplier").textContent = newMultiplier;
+  return; // exit the function early since we updated an existing item
+   
+} else {
+
+  const orderItem = document.createElement("li"); // create a new <li> element
+  orderItem.classList.add("order-item"); // add class for styling
+  orderItem.dataset.name = name; // add data-name attribute for later reference
+
+  // populate the <li> with name and price spans
+  orderItem.innerHTML = `
     <span class="order-name">${name}</span>
+    <span class="order-qty"><span>x</span><span class="multiplier">1</span></span>
     <span class="order-price">£${price}</span>
   `;
 
-  orderList.appendChild(li);
+  orderList.appendChild(orderItem); // appends the new <li> to the order list
+}
 }
 
-// 
-
+// Event listener for all "Add to order" buttons
 orderButtons.forEach(button => {
   button.addEventListener("click", handleAddToOrder);
 }
