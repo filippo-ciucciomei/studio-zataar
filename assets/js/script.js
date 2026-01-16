@@ -7,7 +7,8 @@ function darkMode() {
    element.classList.toggle("dark-mode");
 }
   
-// MENU FILTERING AND ORDERING FUNCTIONALITY
+// MENU FILTERING and SEARCHING FUNCTIONALITY
+// Will need to put them into one function later to combine search and filters
 
 const veganCheckbox = document.getElementById("filterVegan");
 const vegetarianCheckbox = document.getElementById("filterVegetarian");
@@ -61,6 +62,58 @@ document.getElementById("searchInput").addEventListener("input", searchCards);
 
 
   
+
+
+// ORDERING FUNCTIONALITY
+// 
+// User clicks “Add to order” on a card
+// JS reads name + price from that card’s data-*
+// JS creates one <li> row inside a modal list
+// Name and price appear in two columns
+// 
+// 
+const orderButtons = document.querySelectorAll(".add-to-order");
+const orderList = document.getElementById("orderList");
+
+function handleAddToOrder(event) {
+  const button = event.target;
+  const card = button.closest(".meal-card");
+
+  const name = card.dataset.name;
+  const price = card.dataset.price;
+
+  const li = document.createElement("li");
+  li.classList.add("order-item");
+
+  li.innerHTML = `
+    <span class="order-name">${name}</span>
+    <span class="order-price">£${price}</span>
+  `;
+
+  orderList.appendChild(li);
+}
+
+// 
+
+orderButtons.forEach(button => {
+  button.addEventListener("click", handleAddToOrder);
+}
+);
+
+
+
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+
+
+
   
   // const searchInput = document.getElementById("searchInput");
   // const filters = {
