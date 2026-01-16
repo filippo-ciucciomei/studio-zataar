@@ -1,3 +1,71 @@
+// DARK MODE TOGGLE
+// it will add .dark-mode to the body, and in CSS when the 
+// body has .dark-mode, a number of other elements will be changed
+
+// NEED TO FIX COLORING FOR THE MODAL TOO
+
+function darkMode() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+  
+// MENU FILTERING and SEARCHING FUNCTIONALITY
+// Will need to put them into one function later to combine search and filters
+
+const veganCheckbox = document.getElementById("filterVegan");
+const vegetarianCheckbox = document.getElementById("filterVegetarian");
+const halalCheckbox = document.getElementById("filterHalal");
+const cards = document.querySelectorAll(".meal-card");
+
+function filterCards() {
+  cards.forEach(card => {
+    const isVegan = card.dataset.vegan === "true";
+    const isVegetarian = card.dataset.vegetarian === "true";
+    const isHalal = card.dataset.halal === "true";
+
+    if (veganCheckbox.checked && !isVegan) {
+      card.classList.add("hidden");
+    } else if (vegetarianCheckbox.checked && !isVegetarian) {
+      card.classList.add("hidden");
+    } else if (halalCheckbox.checked && !isHalal) {
+      card.classList.add("hidden");
+    } else {
+      card.classList.remove("hidden");
+    }
+  });
+}
+
+veganCheckbox.addEventListener("change", filterCards);
+vegetarianCheckbox.addEventListener("change", filterCards);
+halalCheckbox.addEventListener("change", filterCards);
+
+
+function searchCards() {
+  const searchInput = document.getElementById("searchInput").value.toLowerCase();
+
+  cards.forEach(card => {
+    const name = card.dataset.name.toLowerCase();
+    const ingredients = card.dataset.ingredients.toLowerCase();
+    const allergens = card.dataset.allergens.toLowerCase();
+
+    if (
+      name.includes(searchInput) ||
+      ingredients.includes(searchInput) ||
+      allergens.includes(searchInput)
+    ) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }
+  })
+}
+
+document.getElementById("searchInput").addEventListener("input", searchCards);
+
+
+  
+
+
 // ORDERING FUNCTIONALITY
 // 
 
@@ -69,3 +137,4 @@ function updateOrderTotal() {
 orderButtons.forEach(button => {
   button.addEventListener("click", handleAddToOrder);
 });
+
