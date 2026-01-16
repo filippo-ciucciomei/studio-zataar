@@ -73,12 +73,15 @@ document.getElementById("searchInput").addEventListener("input", searchCards);
 const orderButtons = document.querySelectorAll(".add-to-order");
 const orderList = document.getElementById("orderList");
 
-function handleAddToOrder(event) {
+
+function handleAddToOrder(event) { // event is automatically passed in
   const eventButton = event.target; // event.target tells us which button was clicked
-  const card = eventButton.closest(".meal-card");
+  const card = eventButton.closest(".meal-card"); // find the closest parent with class "meal-card"
 
   const name = card.dataset.name;
   const price = card.dataset.price;
+
+  
 
   // before we create a new order item, check if it already exists
   const existingItem = orderList.querySelector(
@@ -94,6 +97,9 @@ const total = parseFloat(price) * newMultiplier;
 
   existingItem.querySelector(".order-price").textContent = `£${total.toFixed(2)}`;
   existingItem.querySelector(".multiplier").textContent = newMultiplier;
+
+
+  
   return; // exit the function early since we updated an existing item
    
 } else {
@@ -101,6 +107,7 @@ const total = parseFloat(price) * newMultiplier;
   const orderItem = document.createElement("li"); // create a new <li> element
   orderItem.classList.add("order-item"); // add class for styling
   orderItem.dataset.name = name; // add data-name attribute for later reference
+  orderItem.dataset.price = price; // add data-price attribute for later reference
 
   // populate the <li> with name and price spans
   orderItem.innerHTML = `
@@ -110,14 +117,44 @@ const total = parseFloat(price) * newMultiplier;
   `;
 
   orderList.appendChild(orderItem); // appends the new <li> to the order list
+
 }
+updateOrderTotal()
+
 }
+
+// ORDER TOTAL CALCULATION 
+
+function updateOrderTotal() { 
+  let total = 0;
+  const orderItems = orderList.querySelectorAll(".order-item");
+
+  
+
+  orderItems.forEach(item => {
+    const itemprice = parseFloat(item.dataset.price)
+    const multiplier = parseInt(item.querySelector(".multiplier").textContent)
+    total += itemprice * multiplier;
+  })
+
+document.querySelectorAll(".total").forEach(el => {
+  el.textContent = `${total.toFixed(2)}`;
+});
+
+console.log(multiplier)
+}
+
+
 
 // Event listener for all "Add to order" buttons
 orderButtons.forEach(button => {
   button.addEventListener("click", handleAddToOrder);
 }
 );
+
+
+
+
 
 
 
