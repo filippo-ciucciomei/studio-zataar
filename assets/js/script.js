@@ -2,11 +2,16 @@
 // it will add .dark-mode to the body, and in CSS when the 
 // body has .dark-mode, a number of other elements will be changed
 
+const darkModeToggle = document.getElementById("dark-mode-btn");
 
 function darkMode() {
   var element = document.body;
   element.classList.toggle("dark-mode");
 }
+
+
+  darkModeToggle.addEventListener("click", darkMode);
+
 
 // MENU FILTERING and SEARCHING FUNCTIONALITY
 // Will need to put them into one function later to combine search and filters
@@ -32,6 +37,9 @@ function filterCards() {
       card.classList.remove("hidden");
     }
   });
+
+  updateMenuAlignment();
+
 }
 
 veganCheckbox.addEventListener("change", filterCards);
@@ -57,6 +65,7 @@ function searchCards() {
       card.classList.add("hidden");
     }
   })
+  updateMenuAlignment();
 }
 
 document.getElementById("searchInput").addEventListener("input", searchCards);
@@ -159,3 +168,20 @@ orderList.addEventListener("click", function (event) {
   }
 });
 
+
+// MENU ALIGNMENT UPDATE FUNCTION
+function updateMenuAlignment() {
+  const menu = document.getElementById("menu");
+  const visibleCards = menu.querySelectorAll(
+    ".meal-card:not(.hidden)"
+  );
+
+  if (visibleCards.length <= 2) {
+    menu.classList.add("justify-content-start");
+    menu.classList.remove("justify-content-between");
+
+  } else {
+    menu.classList.remove("justify-content-start");
+    menu.classList.add("justify-content-between");
+  }
+}

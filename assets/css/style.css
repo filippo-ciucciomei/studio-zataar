@@ -102,14 +102,16 @@ body.dark-mode .modal-content {
     font-size: 0.8rem;
 }
 
+.card-title {
+  font-size: 0.9rem;   /* h6-ish size */
+  font-weight: 500;
+  text-transform: uppercase; /* optional */
+  letter-spacing: 0.05em;    /* optional */
+}
+
 .card.h-100 {
     display: flex;
     flex-direction: column;
-}
-
-.card {
-    max-width: 4ç0vw;
-
 }
 
 .card-body {
