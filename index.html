@@ -32,8 +32,7 @@
         <!-- <h1 class="text-center mb-4">Restaurant Menu</h1> -->
 
         <!-- SEARCH + FILTERS -->
-         <form class="d-flex flex-column flex-md-row align-items-stretch align-items-md-center gap-3 flex-grow-1" role="search" aria-label="Menu search and filters">
-        <div class="container">
+        <div id="filterAndSearch" class="container">
             <div class="row">
                 <!-- SEARCH & FILTERS -->
                 <div class="col-8">
@@ -88,10 +87,9 @@
         </div>
             </div>
         </div>
-    </form>
 
         <!-- MENU -->
-            <div class="row g-4 d-flex justify-content-center " id="menu">
+            <div class="row g-4 d-flex justify-content-between " id="menu">
 
 
                 <!-- HUMMUS & WARM PITA CARD -->
@@ -916,7 +914,7 @@
 
                 <div class="modal-body">
                     <ul class="list-group mb-3" id="orderList"></ul>
-                    <p class="fw-bold">
+                    <p class="fw-bold text-end">
                         Total: £<span class="total" id="modal-total">0.00</span>
                     </p>
                 </div>
