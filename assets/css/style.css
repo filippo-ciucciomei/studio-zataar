@@ -1,5 +1,7 @@
-/* div, span {
-    outline: 1px solid red; For debugging layout issues} */
+/* div, span */
+/* div {
+    outline: 1px solid red;} */
+
 
 
 /* DARK MODE CLASS */
@@ -62,6 +64,34 @@ body.dark-mode .modal-content {
     background-color: rgba(248, 249, 250, 0.8);
     margin: 0px !important;
 }
+
+#filterBox {
+    min-width: 265px !important;
+}
+
+.search-row {
+    padding: 12px;
+}
+
+#searchInput {
+        /* max-width: 350px; */
+        width: 350px;
+    }
+
+    .btn-tot {
+        font-size: 0.7rem !important;
+    }
+
+/* .checkbox-row {
+  display: flex !important;
+  gap: 16px;
+  align-items: center;
+} */
+
+
+/* .container {
+    background-color: rgba(180, 180, 180, 0.773);
+} */
 
 /* CARDS */
 
@@ -129,8 +159,9 @@ body.dark-mode .modal-content {
         max-width: 250px;
     }
 
-    #searchInput {
-        max-width: 350px;
+    .btn-tot {
+        font-size: 0.9rem !important;
     }
+    
 
 }

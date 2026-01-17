@@ -32,37 +32,63 @@
         <!-- <h1 class="text-center mb-4">Restaurant Menu</h1> -->
 
         <!-- SEARCH + FILTERS -->
-        <div class="row mb-4 g-3">
+         <form class="d-flex flex-column flex-md-row align-items-stretch align-items-md-center gap-3 flex-grow-1" role="search" aria-label="Menu search and filters">
+        <div class="container">
+            <div class="row">
+                <!-- SEARCH & FILTERS -->
+                <div class="col-8">
 
-            <div class="col-md-6">
-                <div class="row">
-                <input type="text" id="searchInput" class="form-control"
-                    placeholder="Search by name, ingredient or allergen" />
-            </div>
-            </div>
+                    <!-- SEARCH -->
+                    <div class="row my-2">
 
-            <div class="col-md-6 d-flex gap-3 flex-wrap align-items-center">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="filterVegan">
-                    <label class="form-check-label">Vegan</label>
+                        <div class="flex-grow-1">
+                            <label for="menuSearch" class="visually-hidden">Search by name, ingredient or
+                                allergen</label>
+                            <div class="input-group input-group-sm">
+
+                                <input type="text" class="form-control" id="searchInput"
+                                    placeholder="Search by name, ingredient or allergen"
+                                    aria-describedby="searchIcon" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FILTERS -->
+                    <div class="row my-2">
+                        
+                         <fieldset class="m-0">
+                            <legend class="visually-hidden">Dietary filters</legend>
+                            <div id="filterBox" class="d-flex flex-wrap gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="filterVegan">
+                                    <label class="form-check-label" for="filterVegan">Vegan</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="filterVegetarian">
+                                    <label class="form-check-label" for="filterVegetarian">Vegetarian</label>
+                                </div>
+
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="filterHalal">
+                                    <label class="form-check-label" for="filterHalal">Halal</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </div>
+                
                 </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="filterVegetarian">
-                    <label class="form-check-label">Vegetarian</label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="filterHalal">
-                    <label class="form-check-label">Halal</label>
-                </div>
-
-                <button class="btn btn-dark ms-auto" data-bs-toggle="modal" data-bs-target="#orderModal">
-                    View Order <br>
-                    £<span id="total-page-preview" class="total">0.00</span>
-                </button>
+                <!-- ORDER BUTTON -->
+                <div class="col-4 my-2 align-items-center d-flex">
+                    <button type="button" class="btn btn-dark ms-auto btn-order btn-tot" data-bs-toggle="modal" data-bs-target="#orderModal">Preview<br>
+            £<span id="total-page-preview" class="total">0.00</span>
+          </button>
+        </div>
             </div>
         </div>
+    </form>
 
         <!-- MENU -->
             <div class="row g-4 d-flex justify-content-center " id="menu">
