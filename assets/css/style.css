@@ -12,6 +12,11 @@
     color: #e0e0e0 !important;
 }
 
+body.dark-mode #filterAndSearch {
+    background-color: #121212 !important;
+ 
+}   
+
 body.dark-mode #menu {
     background-color: #121212 !important;
     /* background-image: url("../images/background.png"); */
