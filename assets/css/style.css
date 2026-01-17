@@ -146,7 +146,7 @@ body.dark-mode .modal-content {
   display: flex;
   justify-content: space-between;  /* lets the two span elements be on opposite ends */
   align-items: center;
-  /* padding: 6px 0; */
+  margin-bottom: 10px;
   gap: 1rem;
 }
 
