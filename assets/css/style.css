@@ -108,7 +108,7 @@ body.dark-mode .modal-content {
 }
 
 .card {
-    max-width: 40vw;
+    max-width: 4ç0vw;
 
 }
 
@@ -129,8 +129,22 @@ body.dark-mode .modal-content {
 
 /* Change the bg and text color for the main dishes badge */
 .bg-danger {
-    background-color: #4791bc !important;
+    background-color: #1b4f6d !important;
     color: #ffffff;
+}
+
+.bg-info {
+    background-color: #b50303 !important;
+    color: #ffffff;
+}
+
+.bg-warning {
+    background-color: #ba940c !important;
+    color: #ffffff;
+}
+
+span.bg-light {
+    background-color: #8fc9fb !important;
 }
 
 /* ORDER SUMMARY MODAL */
