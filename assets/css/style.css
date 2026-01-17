@@ -127,22 +127,25 @@ body.dark-mode .modal-content {
     width: auto;
 }
 
-/* Change the bg and text color for the main dishes badge */
+/* Main dishes badge */
 .bg-danger {
     background-color: #1b4f6d !important;
     color: #ffffff;
 }
 
+/* Starter badge */
 .bg-info {
     background-color: #b50303 !important;
     color: #ffffff;
 }
 
+/* Dessert badge */
 .bg-warning {
-    background-color: #ba940c !important;
+    background-color: rgb(175, 137, 2) !important;
     color: #ffffff;
 }
 
+/* Drink badge */
 span.bg-light {
     background-color: #8fc9fb !important;
 }
