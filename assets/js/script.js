@@ -2,13 +2,12 @@
 // it will add .dark-mode to the body, and in CSS when the 
 // body has .dark-mode, a number of other elements will be changed
 
-// NEED TO FIX COLORING FOR THE MODAL TOO
 
 function darkMode() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
+  var element = document.body;
+  element.classList.toggle("dark-mode");
 }
-  
+
 // MENU FILTERING and SEARCHING FUNCTIONALITY
 // Will need to put them into one function later to combine search and filters
 
@@ -63,7 +62,7 @@ function searchCards() {
 document.getElementById("searchInput").addEventListener("input", searchCards);
 
 
-  
+
 
 
 // ORDERING FUNCTIONALITY
@@ -87,7 +86,7 @@ function handleAddToOrder(event) { // event is automatically passed in
   if (existingItem) {
     const multiplierEl = existingItem.querySelector(".multiplier"); // get multiplier span
     const currentMultiplier = parseInt(multiplierEl.textContent); // converts to Integer 
-    const newMultiplier = currentMultiplier + 1; 
+    const newMultiplier = currentMultiplier + 1;
 
     multiplierEl.textContent = newMultiplier; // update quantity in DOM
 
@@ -106,10 +105,19 @@ function handleAddToOrder(event) { // event is automatically passed in
 
     // populate the <li> with name and price spans
     orderItem.innerHTML = `
-      <span class="order-name">${name}</span>
-      <span class="order-qty"><span>x</span><span class="multiplier">1</span></span>
-      <span class="order-price">£${price}</span>
-    `;
+  <span class="order-left">
+    <span class="order-qty">(x<span class="multiplier">1</span>)</span>
+    <span class="order-name">${name}</span>
+  </span>
+
+  <span class="remove-item">
+    <i class="fa-regular fa-trash-can"></i>
+  </span>
+
+  <span class="order-line-spacer"></span>
+
+  <span class="order-price">£${price}</span>
+`;
 
     orderList.appendChild(orderItem); // appends the new <li> to the order list
 
@@ -123,18 +131,31 @@ function updateOrderTotal() {
   let total = 0;
 
   orderItems.forEach(item => {
-    const unitPrice = parseFloat(item.dataset.price); 
-    const multiplier = parseInt(item.querySelector(".multiplier").textContent); 
+    const unitPrice = parseFloat(item.dataset.price);
+    const multiplier = parseInt(item.querySelector(".multiplier").textContent);
     total += unitPrice * multiplier; // += accumulates the total
   });
 
   // Update total in both modal and page preview
   document.getElementById("modal-total").textContent = `${total.toFixed(2)}`; // toFixed formats to 2 decimal 
-  document.getElementById("total-page-preview").textContent = `${total.toFixed(2)}`; 
+  document.getElementById("total-page-preview").textContent = `${total.toFixed(2)}`;
 }
 
 // Event listener for all "Add to order" buttons
 orderButtons.forEach(button => {
   button.addEventListener("click", handleAddToOrder);
+});
+
+
+
+// REMOVE ITEM FROM ORDER
+// As the remove buttons don't exist when the page loads, we need to use event delegation
+// Event delegation: listen for clicks on the parent <ul> (orderList) 
+orderList.addEventListener("click", function (event) {
+  if (event.target.closest(".remove-item")) {
+    const removingItem = event.target.closest(".order-item");
+    removingItem.remove();
+    updateOrderTotal();
+  }
 });
 

@@ -1,5 +1,4 @@
-/* div, span */
-/* div {
+/* div, span {
     outline: 1px solid red;} */
 
 
@@ -79,6 +78,8 @@ body.dark-mode .modal-content {
   position: sticky;
   top: 0;
   /* margin-top: 30px; */
+  padding-top: 20px;
+    padding-bottom: 10px;
   z-index: 1000;
   background: #f8f9fa;
 }
@@ -144,21 +145,50 @@ body.dark-mode .modal-content {
 .order-item {
   display: flex;
   justify-content: space-between;  /* lets the two span elements be on opposite ends */
-  padding: 6px 0;
+  align-items: center;
+  /* padding: 6px 0; */
+  gap: 1rem;
+}
+
+.order-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  max-width: 300px;
 }
 
 .order-name {
   /* flex: 1; */
-  width: 250px;
+  /* width: 250px; */
 }
 
 .order-qty {
-    flex: 1;
+  min-width: 3rem;   /* FIXED WIDTH */
+  text-align: right;
+}
+
+.remove-item {
+  cursor: pointer;
+  width: 2rem;
+  text-align: center;
 }
 
 .order-price {
   font-weight: bold;
+  min-width: 4.5rem;
+  text-align: right;
 }
+
+.order-line-spacer {
+  width: 300px;
+}
+@media  (max-width: 992px) {
+  .order-line-spacer {
+    display: none;
+  }
+}
+
 .order-total {
   font-weight: bold;
   font-size: 1.2em;
