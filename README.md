@@ -1,5 +1,19 @@
-# studio-zataar
+## 📑 Table of Contents
 
+- [Project Overview](#-project-overview)
+- [User Value](#-user-value)
+- [Features](#-features)
+  - [Search & Filters](#-search--filters)
+  - [Ordering System](#-ordering-system)
+  - [Dark / Light Mode](#-dark--light-mode)
+  - [Responsive Design](#-responsive-design)
+- [Testing & Validation](#-testing--validation)
+- [JavaScript Functionality](#-javascript-functionality)
+- [Deployment](#-deployment)
+- [Project Structure](#-project-structure)
+- [AI Usage & Reflection](#-ai-usage--reflection)
+- [Future Improvements](#-future-improvements)
+- [Author](#-author)
 
 
 # Project 2 – Interactive Restaurant Menu (JavaScript)
@@ -159,14 +173,14 @@ The project is deployed to a cloud hosting platform.
 │ ├── js/
 │ │ └── script.js
 │ └── images/
-│       ├── menu/
-│       │ ├── falafel.png
-│       │ ├── tzatziki.png
-│       │ └── etc
-│       └── readme/
-│         ├── htmlvalidator.png
-│         ├── cssvalidator.png
-│         └── lighthouse.png
+│ ├── menu/
+│ │ ├── falafel.png
+│ │ ├── tzatziki.png
+│ │ └── etc
+│ └── readme/
+│ ├── html-validator.png
+│ ├── css-validator.png
+│ └── lighthouse.png
 └── README.md
 
 
