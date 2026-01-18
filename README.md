@@ -30,6 +30,7 @@ The application focuses on **user experience, accessibility, responsiveness, and
 - [Deployment](#-deployment)
 - [Project Structure](#-project-structure)
 - [AI Usage & Reflection](#-ai-usage--reflection)
+- [Other Tools usage](#other-tools)
 - [Future Improvements](#-future-improvements)
 - [Author](#-author)
 
@@ -202,6 +203,15 @@ AI tools (ChatGPT & Copilot) were used throughout the development process to:
 
 Using AI significantly improved productivity and learning efficiency.  
 Rather than replacing understanding, AI was used as a **learning accelerator**, helping identify issues faster and explore better solutions while still requiring full comprehension and implementation by the developer.
+
+---
+
+## 🔧 Other Tools
+
+**For this project I have used**
+ - Bootstrap: for easy responsivness and pre made elements
+ - FontAwsome: for the dark/light toggle and the rubbish icon
+
 
 ---
 
