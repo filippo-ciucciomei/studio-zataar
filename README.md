@@ -1,3 +1,21 @@
+# Studio Zaatar – Interactive Restaurant Menu (JavaScript)
+
+## 📌 Project Overview
+ ![light mode mockup](assets/images/readme/all-devices-light.png)
+ ![dark mode mockup](assets/images/readme/all-devices-dark.png)
+ ![order summary preview mobile](assets/images/readme/order-summary-mobile.png)
+ ![order summary preview tablet](assets/images/readme/order-summary-tablet.png)
+ ![order summary preview laptop](assets/images/readme/order-summary-laptop.png)
+
+
+
+This project is a **single-page interactive restaurant menu web application** built using **HTML, CSS, and vanilla JavaScript**.  
+Users can browse menu items, filter by dietary preferences, search by keywords, add items to an order, and view a dynamically updated total.
+
+The application focuses on **user experience, accessibility, responsiveness, and clean JavaScript logic**, following best practices taught during the WAES Full Stack Bootcamp.
+
+---
+
 ## 📑 Table of Contents
 
 - [Project Overview](#-project-overview)
@@ -15,16 +33,6 @@
 - [Future Improvements](#-future-improvements)
 - [Author](#-author)
 
-
-# Project 2 – Interactive Restaurant Menu (JavaScript)
-
-## 📌 Project Overview
-
-This project is a **single-page interactive restaurant menu web application** built using **HTML, CSS, and vanilla JavaScript**.  
-Users can browse menu items, filter by dietary preferences, search by keywords, add items to an order, and view a dynamically updated total.
-
-The application focuses on **user experience, accessibility, responsiveness, and clean JavaScript logic**, following best practices taught during the WAES Full Stack Bootcamp.
-
 ---
 
 ## 🎯 User Value
@@ -32,7 +40,7 @@ The application focuses on **user experience, accessibility, responsiveness, and
 This application allows users to:
 
 - Quickly **search menu items** by name, ingredients, or allergens
-- **Filter meals** by Vegan, Vegetarian, or Halal options
+- **Filter meals** by multiple dietary restrictions
 - **Build an order dynamically** with quantity tracking
 - See **real-time price updates**
 - Switch between **Light and Dark mode**
@@ -77,46 +85,31 @@ This application allows users to:
   - Flexbox
   - Bootstrap utility classes
   - Media queries
+  - JS functions
 
 ---
 
 ## 🧪 Testing & Validation
 
- **HTML**
-
- ![html validator](assets/images/readme/html-validator.png)
-
- **CSS**
- ![css validator](assets/images/readme/css-validator.png)
-
- **Lighthouse**
-  ![Lighthouse test results](assets/images/readme/lighthouse.png)
-
-**JavaScript**
-This project was linted using ESLint with browser-based JavaScript rules.
-All linting issues were resolved and the project passes ESLint checks.
-
-
-
-
-### ✅ HTML Validation
+ 
+ ### ✅ HTML Validation
 - Validated using **W3C HTML Validator**
 - Screenshot:  
-  `assets/readme/htmlvalidator.png`
+ ![html validator](assets/images/readme/html-validator.png)
 
 ### ✅ CSS Validation
 - Validated using **W3C Jigsaw Validator**
 - Screenshot:  
-  `assets/readme/cssvalidator.png`
+ ![css validator](assets/images/readme/css-validator.png)
 
-### ✅ Accessibility
-- Tested using **Lighthouse**
-- Improvements made:
+### ✅ Lighthouse Testing
+- Improvements made to improve Accessibility score:
   - Proper label associations
   - Semantic HTML
   - Accessible buttons and inputs
-- Screenshot:  
-  `assets/readme/lighthouse.png`
+- Screenshot:
+ ![Lighthouse test results](assets/images/readme/lighthouse.png)
+
 
 ### ✅ JavaScript Linting
 - JavaScript checked with a linter
@@ -141,7 +134,7 @@ The project uses JavaScript to:
 - Conditional logic (`if / else`)
 - Loops (`forEach`)
 - Dataset attributes
-- Functions and separation of concerns
+- Functions 
 
 ### Error Handling:
 - Prevents duplicate order items
@@ -159,7 +152,7 @@ The project is deployed to a cloud hosting platform.
 - No broken links or missing assets
 
 **Live Site:**  
-👉 _Add your deployed URL here_
+👉 https://filippo-ciucciomei.github.io/studio-zataar/
 
 ---
 
@@ -194,13 +187,16 @@ studio-zaatar/
 
 ## 🤖 AI Usage & Reflection
 
-AI tools (ChatGPT) were used throughout the development process to:
+AI tools (ChatGPT & Copilot) were used throughout the development process to:
 
-- Generate starter code patterns
+- Generate images
+- Support JavaScript Logic
 - Debug JavaScript logic
 - Improve accessibility compliance
 - Refactor and optimise UI behaviour
 - Clarify JavaScript concepts and best practices
+- Handle repetitive tasks (e.g. cards duplication)
+- General tutoring
 
 ### Reflection
 
@@ -211,10 +207,8 @@ Rather than replacing understanding, AI was used as a **learning accelerator**, 
 
 ## 📌 Future Improvements
 
-- Persist order data using `localStorage`
-- Add animations for order interactions
 - Improve filter logic to allow compound filtering
-- Add keyboard navigation enhancements
+- Add payment page to finalise the order
 
 ---
 
@@ -222,4 +216,4 @@ Rather than replacing understanding, AI was used as a **learning accelerator**, 
 
 **Filippo Ciucciomei**  
 WAES – Full Stack Bootcamp  
-Project 2 – JavaScript
+
