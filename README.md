@@ -163,6 +163,12 @@ The project is deployed to a cloud hosting platform.
  
 ---
 
+## Wireframes
+ ![wireframes](assets/images/readme/wireframes.jpeg)
+
+
+---
+
 ## 🗂️ Project Structure
 
 <pre> 
