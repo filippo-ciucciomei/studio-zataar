@@ -30,7 +30,7 @@ The application focuses on **user experience, accessibility, responsiveness, and
 - [Deployment](#-deployment)
 - [Project Structure](#-project-structure)
 - [AI Usage & Reflection](#-ai-usage--reflection)
-- [Other Tools usage](#other-tools)
+- [Other Tools usage](#-other-tools)
 - [Future Improvements](#-future-improvements)
 - [Author](#-author)
 
