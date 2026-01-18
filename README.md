@@ -155,6 +155,12 @@ The project is deployed to a cloud hosting platform.
 **Live Site:**  
 👉 https://filippo-ciucciomei.github.io/studio-zataar/
 
+
+---
+
+## Wireframes
+ ![wireframes](assets/images/readme/wireframes.jpeg)
+ 
 ---
 
 ## 🗂️ Project Structure
