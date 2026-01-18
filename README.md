@@ -209,11 +209,11 @@ Rather than replacing understanding, AI was used as a **learning accelerator**, 
 
 - Improve filter logic to allow compound filtering
 - Add payment page to finalise the order
+- Allow the user to request changes on the single dish
 
 ---
 
 ## 👤 Author
 
 **Filippo Ciucciomei**  
-WAES – Full Stack Bootcamp  
-
+ 
