@@ -165,7 +165,8 @@ The project is deployed to a cloud hosting platform.
 
 ## 🗂️ Project Structure
 
-/
+<pre> 
+studio-zaatar/
 ├── index.html
 ├── assets/
 │ ├── css/
@@ -182,6 +183,7 @@ The project is deployed to a cloud hosting platform.
 │ ├── css-validator.png
 │ └── lighthouse.png
 └── README.md
+</pre>
 
 
 - HTML, CSS, and JavaScript are separated into external files
