@@ -176,7 +176,7 @@ function updateMenuAlignment() {
     ".meal-card:not(.hidden)"
   );
 
-  if (visibleCards.length <= 2) {
+  if (visibleCards.length <= 3) { 
     menu.classList.add("justify-content-start");
     menu.classList.remove("justify-content-between");
 
