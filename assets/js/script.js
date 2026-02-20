@@ -165,6 +165,8 @@ orderList.addEventListener("click", function (event) {
     const removingItem = event.target.closest(".order-item");
     removingItem.remove();
     updateOrderTotal();
+  } else {
+    return; // do nothing if not clicking on remove button
   }
 });
 
